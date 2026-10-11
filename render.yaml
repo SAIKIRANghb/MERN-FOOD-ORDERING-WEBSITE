@@ -1,0 +1,11 @@
+staticSites:
+  - type: static_site
+    name: hungrezy-frontend
+    plan: free
+    staticPublishPath: dist
+    buildCommand: npm ci && npm run build
+    envVars:
+      - key: VITE_HUNGREZY_API
+        sync: false
+      - key: VITE_SOCKET_URL
+        sync: false
